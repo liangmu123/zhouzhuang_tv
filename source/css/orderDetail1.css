@@ -1,0 +1,101 @@
+html, body, div, p, span, img, a, ol, ul, li, table, caption, thead, tbody, tfoot, th, td, tr {margin: 0;padding: 0;}
+ul {list-style: none;}
+
+body {font-size: 18px;font-family:"SimHei";color:#FFF;width: 720px;height: 576px;background-repeat: no-repeat;background: no-repeat url(../img/allOrder/105-1.png)}
+
+.info{width: 500px;height: 35px;position: absolute;left: 43px;top: 33px;}
+.topbar{width:720px;height:75px;position: absolute;left: 0px;top: 0px;}
+.info .item{color: #FFFFFF;font-size: 26px;}
+
+.header {width: 720px;height: 75px;}
+
+.clock {width: 250px;height: 70px;position: absolute;left: 420px;top: 0px;font-size: 16px;text-align: right;}
+#week{position: absolute;left: 0px;top: 30px;height: 16px;font-size:18px;width:140px;text-align:right;line-height:16px;}
+#YMD{position: absolute;top: 50px;left: 0px;font-size:18px;text-align: right;width: 140px;height: 16px;line-height:16px;}
+#HM {position: absolute;left: 140px;text-align: center;font-size: 38px;color: #FFFFFF;height: 42px;width: 118px;top: 25px;line-height:42px;}
+
+
+.iconContainer{width:637px;height:384px;left:45px;top:91px;position:absolute;font-size:18px;background:url(../img/orderDetail/img_dingdanxiangqin.png) no-repeat;color:#000000;}
+.order-info{width:637px;height:80px;top:36px;position:relative;}
+.order-info table{width: 637px;height:80px;border-collapse:collapse;}
+.order-info table, td, th{text-align:center;border:solid 0px gray;}
+/*.order-info tr{width:637px;height:80px;}*/
+.order-info .order-item{width:1165px;height:94px;float:left;text-align:center;}
+.order-info .order-info{width:395px;float:left;}
+.order-info .icon{
+	width:70px;
+	height:50px;
+	float:left;
+	margin-top:5px;
+	margin-left:3px;
+}
+.order-info .icon img{
+	width:70px;
+	height:50px;
+}
+.order-info .desc{
+	height:60px;
+	width:115px;
+	text-align:left;
+	float:left;
+}
+.desc_text{
+	width:115px;
+	height:40px;
+}
+.desc_price{
+	width:115px;
+	height:20px;
+}
+
+.order-info .business{width:160px;float:left;line-height:94px;}
+.order-info .price{width:164px;float:left;margin-top:25px;}
+.order-info .order-state{width:168px;float:left;margin-top:0px;white-space:nowrap;padding-bottom:25px;;padding-top:25px;}
+.order-info .order-operation{
+	width:142px;
+	height:28px;
+	margin-left:3px;
+	text-align:center;
+}
+.order-operation-img{
+	width:117px;
+	height:24px;
+}
+.order-detail{
+	width:637px;
+	height:233px;
+	position:absolute;
+	top:151px;
+	left:0px;
+}
+.detail_divs{
+	width:607px;
+	height:140px;
+	position:relative;
+	left:30px;
+	top:20px;
+	font:20px/1.5 "SimHei";
+}
+.detail_div{
+	width:607px;
+	height:20px;
+	margin-top:20px;
+}
+.order-detail .cur{margin-top:0px;}
+.order-detail li{margin-top:20px;height:20px;line-height:20px;}
+
+
+.footer{width: 720px;height: 86px;position: absolute;left: 0px;top: 476px;}
+.button{float:left;margin-left: 8px;}
+.button img{width:97px;height:70px;}	
+.btnFocus{
+	width:97px;
+	height:70px;
+	position:absolute;
+	left:50px;
+	top:485px;
+}
+.btnFocus img{
+	width:97px;
+	height:70px;
+}

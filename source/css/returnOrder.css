@@ -1,0 +1,176 @@
+html, body, div, p, span, img, a, ol, ul, li, table, caption, thead, tbody, tfoot, th, td, tr {margin: 0;padding: 0;}
+ul {list-style: none;}
+
+body {font-size: 18px;font-family:"SimHei";color:#FFF;width: 720px;height: 576px;background-repeat: no-repeat;background: no-repeat url(../img/allOrder/105-1.png);}
+
+.info{width: 500px;height: 35px;position: absolute;left: 43px;top: 33px;}
+.topbar{width:720px;height:75px;position: absolute;left: 0px;top: 0px;}
+.info .item{color: #FFFFFF;font-size: 26px;}
+
+.header {width: 720px;height: 75px;}
+
+.clock {width: 250px;height: 70px;position: absolute;left: 420px;top: 0px;font-size: 16px;text-align: right;}
+#week{position: absolute;left: 0px;top: 30px;height: 16px;font-size:18px;width:140px;text-align:right;line-height:16px;}
+#YMD{position: absolute;top: 50px;left: 0px;font-size:18px;text-align: right;width: 140px;height: 16px;line-height:16px;}
+#HM {position: absolute;left: 140px;text-align: center;font-size: 38px;color: #FFFFFF;height: 42px;width: 118px;top: 25px;line-height:42px;}
+
+.iconContainer{width:637px;height:384px;left:43px;top:91px;position:absolute;font-size:22px;background:url(../img/allOrder/img_caidan.png) no-repeat;}
+.menu{width:637px;height:46px;left:0px;position:absolute;text-align:center;}
+.menu #img_order_hig{position: absolute;top:0;left:1px;width:238px;height:57px;display: none;}
+.menu-item{
+	width:126px;
+	height:46px;
+	/*float:left;*/
+	position:absolute;
+	font-size:18px;
+}
+.menu-item span{
+	position:relative;
+	top:15px;
+}
+.m-page{width:637px;height:46px;position:absolute;left:0px;top:46px;}
+.m-page .page{width:43px;height:28px;position:absolute;top:9px;}
+.m-page .page img{
+	width:43px;
+	height:28px;
+}
+.m-page #btn_endp_hig{width:69px;height:62px;position:absolute;top:6px;left:95px;display:none;}
+.m-page span{width:46px;height:33px;left:8px;top:9px;position:relative;}
+.order{width:614px;height:280px;top:92px;position:absolute;left:11px;background:url(../img/returnOrder/img_dingdanxiangqing.png);font-family: "SimHei";font-size:18px;color:#000000;}
+.order-detail{width:614px;height:242px;top:38px;position:relative;float:left;font-size:18px;}
+#btn_canceldetail_hig{width:110px;position:absolute;left:885px;top:12px;}
+.order-detail table{width: 100%;height:50%;border-collapse:collapse;}
+.order-detail table, td, th{text-align:center;border:solid 0px gray;}
+/*.order-detail tr{width:100%;height:120px;}*/
+.order-detail .order_btn{width:90px;height:94px;line-height: 94px;float: left;}
+.order-detail .order-item{width:1165px;height:94px;float:left;text-align:center;}
+.order-detail .order-info{width:395px;float:left;}
+.order-detail .icon{
+	height:95px;
+	width:115px;
+	float:left;
+	text-align:left;
+	margin-top:5px;
+	margin-left:1px;
+}
+.order-detail .icon img{
+	height:95px;
+	width:115px;
+}
+.order-detail .desc{
+	height:95px;
+	width:160px;
+	float:left;
+	text-align:left;
+	margin-top:5px;
+}
+.desc_text{
+	width:160px;
+	height:70px;
+	overflow:hidden;
+}
+.desc_price{
+	width:160px;
+	height:25px;
+}
+.order-detail .business{width:160px;float:left;line-height:94px;}
+.order-detail .price{width:164px;float:left;margin-top:25px;}
+
+.order-detail .order-state{width:168px;float:left;margin-top:0px;white-space:nowrap;padding-bottom:25px;;padding-top:25px;}
+.order-detail .order-operation{
+	width:140px;
+	height:32px;
+	margin-left:3px;
+	text-align:center;
+}
+
+.order-operation-img{
+	width:117px;
+	height:24px;
+	/*position:relative;
+	left:7px;
+	top:6px;
+	margin-left:10px;
+	margin-top:6px;*/
+}
+
+/**退换货详情页页面start */
+.return-goods{width:1165px;height:326px;top:122px;position:absolute;left:14px;background:url(../img/returnOrder/img_kuang.png);font-family: "SimHei";font-size:20px;font-weight:bold;color:#000000;}
+.return-goods .order-detail{width:1165px;height:281px;top:45px;position:relative;float:left;}
+
+.return-goods.order-detail table{width: 100%;height:100%;border-collapse:collapse;}
+.return-goods .order-detail table, td, th{text-align:center;border:solid 0px gray;}
+.return-goods .order-detail tr{width:100%;height:94px;}
+
+.return-goods .order-detail .order-item{width:1165px;height:94px;float:left;text-align:center;}
+.return-goods .order-detail .order-info{width:549px;float:left;}
+.return-goods .order-detail .icon{width:140px;float:left;text-align:center;}
+.return-goods .order-detail .desc{height:84px;width:409px;float:left;text-align:left;margin-top:10px;}
+.return-goods .order-detail img{height:80px;width:140px;margin-left:2px;margin-top:10px;}
+.return-goods .order-detail .business{width:160px;float:left;line-height:94px;}
+.return-goods .order-detail .price{width:164px;float:left;margin-top:25px;}
+
+.return-goods .order-detail .order-state{width:168px;float:left;margin-top:0px;white-space:nowrap;padding-bottom:25px;;padding-top:25px;}
+/*.return-goods .order-detail .order-operation{width:277px;float:left;line-height:94px;}*/
+/**退换货详情页页面stop */
+
+/** 退换货页面 start*/
+.left{width:333px;height:388px;top:18px;left:8px;position:relative;float:left;background:url(../img/returnGoods/img_left.png) no-repeat;color:#000000;font-family: "SimHei";font-size:20px;}
+.right{width:843px;height:379px;top:18px;left:8px;position:relative;background:url(../img/returnGoods/img_right.png) no-repeat;float:left;text-align:center;color:#000000;}
+.goods-icon{width:224px;height:140px;top:51px;position:absolute;}
+.goods-icon img{width:224px;height:140px;}
+.goods-detail{width:325px;height:150px;top:191px;position:absolute;}
+.goods-detail .price{width:160px;height:20px;padding-left:15px;line-height:20px;float:left;color:#F00;}
+.goods-detail .num{width:145px;height:20px;float:left;line-height:20px;text-align:right;}
+.goods-detail .detail{height:45px;width:310px;padding-left:15px;top:25px;position:absolute;}
+.toggle{width:843px;height:51px;position:relative;float:left;}
+.toggle .exchange{width:419px;height:51px;background:url(../img/returnGoods/btn_changegoods_nor.png) no-repeat;float:left;z-index:-1;}
+.toggle img{width:442px;height:86px;margin-left:-2px;margin-top:-2px;z-index:1;}
+.toggle .return{width:419px;height:51px;background:url(../img/returnGoods/btn_returngoods_nor.png) no-repeat;float:left;z-index:-1;}
+.exchange-reason{width:843px;height:289px;top:90px;position:absolute;}
+.exchange-reason .submit-num{width:300px;height:40px;left:270px;top:10px;position:relative;line-height:40px;}
+.exchange-reason .txt{float:left;margin-top:0px;font-weight:bold;font: 20px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;}
+.exchange-reason .submit-reason .reason{width:200px;height:65px;float:left;font-weight:200;margin-left:15px;}
+.exchange-reason .submit-reason{width:320px;height:65px;left:270px;top:30px;position:relative;}
+.exchange-reason .submit-reason .reason .icon{height:30px;width:30px;float:left;background:url(../img/returnGoods/btn_round_nor.png) no-repeat;}
+.submit-reason .reason .txt{height:30px;line-height:30px;margin-left:10px;}
+.selected{width:30px;height:30px;}
+.exchange-reason .sum{width:70px;height:30px;line-height:30px;border:2px solid #000;float:left;margin-left:15px;}
+.exchange-reason .sum .num{width:40px;float:left;}
+.exchange-reason .sum .down{width:30px;float:left;height:30px;line-height:30px;}
+.exchange-reason .submit-num img{width:15px;height:12px;margin-top:9px;}
+.exchange-reason .submit{width:163px;height:45px;left:384px;top:155px;position:absolute;background:url(../img/returnGoods/btn_putin_nor.png) no-repeat;}
+.exchange-reason .submit img{width:183px;height:80px;margin-left:-3px;margin-top:-3px;}
+
+.return-reason{width:843px;height:289px;top:90px;position:absolute;font-size:24px;}
+.return-reason .input{text-align:left;width:290px;float:left;margin-left:20px;display:inline-block; vertical-align:middle; }
+.return-reason .down{width:40px;height:36px;line-height:36px;float:left;text-align:center;}
+.return-reason .icon{width:15px;height:12px;vertical-align:middle;margin-top:12px;}
+.return-reason .submit-num{width:500px;height:40px;top:21px;left:174px;position:absolute;float:left;line-height:40px;}
+.return-reason .submit-num .num{width:350px;height:36px;float:left;border:solid 2px #000000;line-height:36px;margin-left:20px;}
+.return-reason .desc{width:500px;height:40px;top:81px;left:174px;position:absolute;line-height:40px;}
+.return-reason .desc .reason{width:350px;height:36px;float:left;border:solid 2px #000000;line-height:36px;margin-left:20px;}
+.return-reason .submit-btn{width:163px;height:45px;left:303px;top:140px;position:absolute;background:url(../img/returnGoods/btn_putin_nor.png) no-repeat;}
+.return-reason .submit-btn img{width:183px;height:80px;margin-left:-3px;margin-top:-3px;display:none;}
+
+/** 退换货页面 stop*/
+
+.footer{width: 720px;height: 86px;position: absolute;left: 0px;top: 476px;}
+.button{float:left;margin-left: 8px;}
+.button img{width:97px;height:70px;}	
+.btnFocus{
+	width:97px;
+	height:70px;
+	position:absolute;
+	left:50px;
+	top:485px;
+}
+.btnFocus img{
+	width:97px;
+	height:70px;
+}
+
+.page img{
+	width:43px;
+	height:28px;
+}

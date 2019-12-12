@@ -1,0 +1,173 @@
+body {
+	float: left;
+	overflow: hidden;
+	background: url(../img/abg.png) no-repeat left top;
+}
+
+.container {
+	width: 1280px;
+	height: 720px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+/**/
+.bodyContain {
+	width: 100%;
+	position: relative;
+	left: 0;
+	/* border: 1px solid green; */
+	height: 480px;
+}
+
+.describe {
+    width: 1120px;
+    height: 369px;
+    /* background: rgba(231,221,163,1); */
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    margin-top: -100px;
+    margin-left: -574px;
+    box-sizing: border-box;
+}
+.detailCont{
+	width: 70%;
+    float: right;
+    height: 369px;
+    overflow: hidden;
+	box-sizing: border-box;
+	margin-top: -18px;
+    /* border: 1px solid red; */
+}
+.detailTitle {
+    width: 1100px;
+    height: 35px;
+    float: right;
+    line-height: 30px;
+    margin: auto;
+    margin-top: -70px;
+    text-align: center;
+    font-size: 32px;
+    color: #373737;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#detailTxt {
+	width: 100%;
+    font-size: 24px;
+    color: #414141;
+	line-height: 40px
+}
+
+/* .detailTxt>p{
+    font-size: 24px;
+    line-break: 24px;
+} */
+.picBar{
+	width: 280px;
+    height: 200px;
+    max-height: 400px;
+    /* border: 1px solid red; */
+    position: absolute;
+    box-sizing: border-box;
+    top: 0px;
+    left: 32px;
+}
+
+.imgs {
+	position: absolute;
+    box-sizing: border-box;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 280px;
+	max-height: 400px;
+	display: block;
+	box-sizing: border-box;
+    border: 3px solid transparent;
+}
+.picIntro{
+	position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    color: #ffffff;
+    font-size: 16px;
+    width: 254px;
+    height: 34px;
+    line-height: 34px;
+    left: 13px;
+    top: 170px;
+    text-align: center;
+}
+
+.activeImg img {
+	height: 200px !important;
+}
+
+.activeImgs img {
+	width:300px !important;
+}
+.hh {
+    position: absolute;
+    width: 809px;
+    height: 390px;
+    top: 205px;
+    left: 380px;
+    border-radius: 10px;
+}
+#tishi {
+	text-align: center;
+    display: none;
+    font-size: 30px;
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    top: 330px;
+    left: 500px;
+    z-index: 999;
+}
+/*页码*/
+
+/*.page_show {
+	bottom: 46px;
+	left: 666px;
+	float: left;
+}*/
+
+
+/*激活选项*/
+
+.leftactive {
+	background-image: url(../images/icon-button-red.png);
+}
+
+.active {
+	border: 3px solid red;
+	box-sizing: border-box;
+}
+
+.rightactive {
+	border: 7px solid yellow;
+	width: 862px;
+	height: 55px;
+	padding-top: 5px;
+	/*margin-left: 0px;*/
+}
+
+.focusselect {
+	/* background-color: #b5131a; */
+	border: 3px solid red;
+	box-sizing: border-box;
+}
+
+.tishi2 {
+	top: 656px;
+}

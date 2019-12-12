@@ -1,0 +1,386 @@
+html,
+body,
+div,
+a,
+img {
+    margin: 0px;
+    padding: 0px
+}
+body {
+    width: 1280px;
+    height: 720px;
+    background: transparent;
+}
+a,
+a:hover,
+a:link,
+a:active {
+    text-decoration: none;
+}
+#myShareBody {
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: url(../img/abg.png) no-repeat left top;
+}
+#logina {
+    position: absolute;
+    display: block;
+    right: 80px;
+    top: 50px;
+    width: 218px;
+    height: 57px;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    overflow: hidden;
+}
+#login {
+    float: left;
+}
+#text {
+    float: left;
+    font-size: 22px;
+    color: white;
+    padding-top: 23px;
+    padding-right: 15px;
+}
+#head {
+    float: left;
+    font-size: 22px;
+    color: white;
+    height: 57px;
+    width: 57px;
+    border-radius: 28.5px;
+}
+.containBar {
+    width: 1120px;
+    height: 466px;
+    /* background: rgba(255, 255, 255, 0.2); */
+    border-radius: 10px;
+    position: absolute;
+    top: 142px;
+    left: 50%;
+    margin-left: -560px;
+}
+.shareContain {
+    width: 1090px;
+    height: 440px;
+    position: relative;
+    top: 13px;
+    left: 15px;
+    overflow: hidden;
+}
+
+.leftBar {
+    width: 254px;
+    height: 440px;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.leftBar::-webkit-scrollbar {
+    display: none;
+}
+
+.btnsBar {
+    width: 218px;
+    float: left;
+    margin-left: 16px;
+    margin-top: -23px;
+}
+.leftBtn {
+    width: 100%;
+    height: 55px;
+    border-radius: 10px;
+    line-height: 52px;
+    box-sizing: border-box;
+    background: -webkit-linear-gradient(top,#DBA9A5 0%,#C6615E 100%);
+    margin-top: 24px;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+.btnActive {
+    background: -webkit-linear-gradient(top,#F76868 0%,#D71F1F 100%) !important;
+    color: #ffffff;
+}
+
+.rightBar {
+    width: 824px;
+    float: right;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* 我的技能 */
+.rightSkill {
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+}
+
+.skillBar {
+    width: 778px;
+    float: left;
+    overflow: hidden;
+    margin-left: 22px;
+}
+
+.skill {
+    width: 176px;
+    height: 200px;
+    float: left;
+    background: #ffffff;
+    /* box-shadow: 0px 5px 5px 0px rgba(26, 25, 25, 0.18); */
+    margin-left: 24px;
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid #333333;
+    margin-bottom: 16px;
+}
+
+.skillBar>.skill:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+.skillState {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.skillHead {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(248, 248, 250, 1);
+    top: 0;
+    position: absolute;
+    left: 0;
+}
+.active .skillTitle{
+    background-color: orange;
+}
+.skillTitle {
+    width: 96%;
+    height: 32px;
+    line-height: 32px;
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    position: absolute;
+    top: 166px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.starBar {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    position: absolute;
+    top: 214px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.starPic {
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: left;
+    margin-left: 64px;
+    margin-right: 18px;
+    margin-top: 4px;
+}
+
+.starPoints {
+    width: 80px;
+    height: 30px;
+    float: left;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+}
+
+/* 我的预约 */
+.rightAppoint {
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+    background: rgba(0, 85, 149, 1);
+    display: none;
+}
+
+.appointBar {
+    width: 800px;
+    height: 422px;
+    margin-left: 12px;
+    margin-top: 18px;
+    overflow: hidden;
+}
+
+.appointTitle {
+    width: 100%;
+    height: 50px;
+    float: left;
+    overflow: hidden;
+}
+
+.rightListBar {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.rightList {
+    width: 100%;
+    float: left;
+    background: rgba(255, 216, 0, 1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    color: #ffffff;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.listActive {
+    background-color: #FFD800;
+    color: #333333;
+}
+
+.listBar {
+    width: 25%;
+    height: 44px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    font-size: 24px;
+    line-height: 44px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.listStars {
+    width: 25%;
+    height: 44px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    font-size: 24px;
+    line-height: 44px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 10px
+}
+
+.listBar>.stars:first-child {
+    margin-left: 32px;
+}
+
+.stars {
+    width: 24px;
+    height: 24px;
+    display: block;
+    float: left;
+    margin-top: 8px;
+    margin-left: 3px;
+}
+
+.appTitle {
+    width: 94px;
+    height: 38px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 19px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 38px;
+    float: left;
+    margin-left: 50px;
+    margin-right: 55px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.listPage {
+    width: 127px;
+    height: 36px;
+    float: left;
+    background-color: rgba(255, 216, 0, 1);
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    line-height: 36px;
+    text-align: center;
+    margin-left: 334px;
+    margin-top: 18px;
+}
+.active{
+    box-sizing: border-box;
+    border: 2px solid orange;
+}
+.videoIcon{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+#page_show,#page_show2{
+    position: absolute;
+    width: 131px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    left: 696px;
+    margin-left: 16px;
+    top: 576px;
+    font-size: 22px;
+    background: -webkit-linear-gradient(top, #F66666 0%, #D82424 100%) !important;
+    border-radius: 10px;
+    color: #ffffff;
+}
+.titleName{
+    width: 300px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 45px;
+    color: yellow;
+    float: left;
+    margin-left: 190px;
+    margin-top: 26px;
+}
+.time{
+    position: absolute;
+    width: 300px;
+    height: 56px;
+    left: 600px;
+    top: 77px;
+    color: white;
+    font-size: 20px;
+}
+.leftselect{
+		font-size: 30px !important;
+    /*font-weight: bold !important;*/
+    color: white !important;
+	 background: -webkit-linear-gradient(top,#F76868 0%,#D71F1F 100%) !important;
+}

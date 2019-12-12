@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0px;
+	padding:0px;
+	width:720px;
+	height:576px;
+	 background-color:transparent;
+	background-repeat:no-repeat;
+	background:no-repeat url(../img/index/101.png);
+	font-size:22px;
+	font-family:"SimHei";
+	/*background:transparent ;*/
+}
+
+.info{
+	width: 350px;
+	height: 35px;
+	position: absolute;
+	left: 43px;
+	top: 33px;
+}
+.info-content {
+	width:55px;
+	height:35px;
+	float:left;
+	margin-left:8px;
+}
+.topbar{width:720px;height:75px;position: absolute;left: 0px;top: 0px;}
+.info .item{font-weight: bold;color: #FFFFFF;font-size: 26px;}
+
+.header {width: 720px;height: 75px;}
+
+.clock {width: 250px;height: 70px;position: absolute;left: 420px;top: 0px;font-size: 16px;text-align: right;}
+#week{position: absolute;left: 0px;top: 30px;height: 16px;font-size:18px;width:140px;text-align:right;line-height:16px;}
+#YMD{position: absolute;top: 50px;left: 0px;font-size:18px;text-align: right;width: 140px;height: 16px;line-height:16px;}
+#HM {position: absolute;left: 140px;text-align: center;font-size: 38px;color: #FFFFFF;height: 42px;width: 118px;top: 25px;line-height:42px;}
+
+.item_img{
+	width:98px;
+	height:91px;
+}
+.item_div{
+	width:98px;
+	height:91px;
+	margin-left:15px;
+	margin-top:7px;
+	float:left;
+}
+.tips{
+	margin-top:335px;
+	width:478px;
+	height:170px;
+	background:no-repeat url(source/img/index/img_gonggao_1.png);
+}
+.tip{
+	position:relative;
+	top:35px;
+	margin-left:20px;
+	font-weight:bold;
+	font-size:24px;
+	color:#010101;
+}
+
+.footbar{
+    width:646px;
+	height:54px;
+    position:absolute;
+    left:42px;
+	top:500px;
+	font-family:"SimHei";
+	font-size:18px;
+	color:#FFFFFF;
+}
+.footbar img{
+	width:646px;
+	height:54px;
+}
+.telphone{
+	width:90px;
+	height:21px;
+	position:absolute;
+	left:32px; 
+	top:25px;
+}
+.notice{
+    width:500px; height:40px;
+    position:absolute;
+    left:133px;
+	top:7px;
+    overflow:hidden;
+    color:#FFFFFF;
+    font-size:30px;
+}

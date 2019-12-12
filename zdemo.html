@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+	<head>
+		<meta name="page-view-size" content="1280*720" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>视频</title>
+		<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+		<meta name="page-view-size" content="1280*720">
+		<!--<link rel="shortcut icon" href="templates/images/dangjian.ico">-->
+
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/key.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/EVM_control.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/evm.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/address.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="application/javascript">
+			var MP = new MediaPlayer();
+			var instanceId = mp.getNativePlayerInstanceID(); //读取本地的媒体播放实例的标识
+			try {
+				mp = new MediaPlayer();
+				//				mp = var mp = iPanel.mainFrame.mp;
+			} catch(e1) {
+				alert("e1: " + e1);
+			}
+			try {
+				function init() {
+					MP.setVideoDisplayMode(0);
+					mp.initMediaPlayer(instanceId);
+					MP.setVideoDisplayArea(0, 0, 1280, 720);
+					MP.refreshVideoDisplay();
+					var tmpD = new Date();
+					var tmpStr = tmpD.getFullYear().toString() + (tmpD.getMonth() + 1).toString() + tmpD.getDate().toString();
+					MP.setSingleMedia("http://httpdvb.slave.jscnwx.com:13164/playurl?playtype=live&protocol=http&accesstoken=R5C9444EBU1091F0ABK3BB6B255IB49680AP8M314F9D5V10453Z4E2C9WE205FC41BB1&programid=4202001592&playtoken=31600MDVXYZTRNF10&verifycode=1001828949&auth=no");
+					MP.playFromStart();
+
+					//					MP.setSingleMedia("rtsp://10.119.128.10:554/h264/ch1/main/av_stream");
+					//					MP.setSingleMedia("http://172.16.179.16/data/article/vid.mp4");
+				}
+			} catch(e2) {
+				alert("e2: " + e2);
+			}
+
+			function exitPage() {
+				
+			}
+
+			function $(__id) {
+				return document.getElementById(__id);
+			}
+		</script>
+
+	</head>
+
+	<body bgcolor="transparent" leftmargin="0" topmargin="0" onload="init();" onunload="exitPage();">
+
+	</body>
+
+</html>

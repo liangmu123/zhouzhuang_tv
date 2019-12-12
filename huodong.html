@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+	<head>
+		<meta name="page-view-size" content="1280*720" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>会议直播</title>
+		<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+		<meta name="page-view-size" content="1280*720">
+
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/key.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/EVM_control.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/evm.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/address.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<!--<script src="templates/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>-->
+		<link rel="stylesheet" href="css/huodong.css">
+
+		<style>
+			.nav img {
+				width: 290px;
+				margin-left: 20px;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="head">
+			<!--公共头部不用动-->
+			<div id="title">
+				会议直播
+			</div>
+			<div id="time">
+				时间
+			</div>
+			<div id="touxiang">
+				<img src="img/user.png" />
+			</div>
+			<div id="name">
+				用户名
+			</div>
+		</div>
+		<div id="nav"></div>
+		<!-- <div class="imgleft"><img src="./img/icon_dangyuanminfdan_s.png" alt=""></div>
+    <div class="imgright"><img src="./img/icon_dangyuanpingyi_n.png" alt=""></div> -->
+
+		<!--<div id="menu-3" class="menu" style="display: block;">
+        <div data-id="12"><img alt="加载失败" src="images/cat_img/1.png"></div>
+        <div data-id="1477"><img alt="加载失败" src="images/cat_img/2.png"></div>
+        <div data-id="860"><img alt="加载失败" src="images/cat_img/3.png"></div>
+        <div data-id="255"><img alt="加载失败" src="images/cat_img/4.png"></div>
+    </div>-->
+		</div>
+
+		<script>
+			var Data = [
+				//      {id: "31", name: "两学一做", url: "liangxue.html", img_url: "./templates/images/huodong/huodong1.png", img_focus: "./templates/images/huodong/huodongxz1.png"},
+				//      {id: "38", name: "三会一课", url: "sanhui.html", img_url: "./templates/images/huodong/huodong2.png", img_focus: "./templates/images/huodong/huodongxz2.png"},
+				{
+					id: "31",
+					name: "周庄镇",
+					url: "zdemo.html",
+					img_url: "img/zu225.png",
+					img_focus: "img/index/xz4.png"
+				},
+				{
+					id: "38",
+					name: "宗言村",
+					url: "zdemo.html",
+					img_url: "img/zu226.png",
+					img_focus: "img/index/xz6.png"
+				},
+				{
+					id: "39",
+					name: "宗言村",
+					url: "zdemo.html",
+					img_url: "img/zu227.png",
+					img_focus: "img/index/xz6.png"
+				},
+
+			]
+		</script>
+
+		<script type="text/javascript" src="js/huodong.js"></script>
+
+		<script>
+			function deleteCookie() {
+				//清空COOKIE的索引部分
+				var exp = new Date();
+				exp.setTime(exp.getTime() - 1000);
+				if(arr != null) index = Number(unescape(arr[2]));
+
+				var arr = document.cookie.split(';');
+				for(var i = 0; i < arr.length; i++) {
+					if(arr[i].indexOf('index') > 0) {
+						var name = arr[i].split('=')[0];
+						document.cookie = name + "=;expires=" + exp.toGMTString();
+					}
+				}
+			}
+		</script>
+
+		<script>
+			function clock() {
+				var time = document.getElementById("time");
+				var date = new Date();
+				var weeks = ['日', '一', '二', '三', '四', '五', '六'];
+				var y = date.getFullYear(),
+					m = date.getMonth() + 1,
+					d = date.getDate(),
+					h = adjust(date.getHours()),
+					minu = adjust(date.getMinutes()),
+					w = weeks[date.getDay()],
+					sec = date.getSeconds();
+
+				time.innerHTML = y + '年' + m + "月" +
+					d + "日&nbsp;&nbsp;" + '星期' + w + '&nbsp;&nbsp;' + h + (sec % 2 === 0 ? ":" : "&nbsp;") + minu;
+
+				function adjust(num) {
+					return(num < 10) ? "0" + num : num;
+				}
+
+				setTimeout(clock, 1000);
+			}
+
+			var date = new Date();
+			var year = date.getFullYear();
+			if(year == '1970') {
+				clock();
+			} else {
+				clock();
+			}
+		</script>
+
+	</body>
+	<script type="text/javascript">
+		function getCookie(name) {
+			var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+
+			if(arr = document.cookie.match(reg))
+
+				return unescape(arr[2]);
+			else
+				return null;
+		}
+
+		if(EVM.cookie.getValue('username') != null) {
+			document.getElementById('user').innerHTML = getCookie("username");
+
+			//		EVM.cookie.getValue('username');
+		} else {
+			document.getElementById('user').innerHTML = "请登录";
+		}
+		jc();
+	</script>
+
+</html>

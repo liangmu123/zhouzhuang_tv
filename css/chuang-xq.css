@@ -1,0 +1,60 @@
+body {
+    background: url(../img/bg-three.png) no-repeat;
+}
+.model {
+	/*border: 1px solid;*/
+	width: 1060px;
+	height: 480px;
+	position: absolute;
+	top: 130px;
+	left: 105px;
+}
+
+.information {
+	width: 1060px;
+	height: 475px;
+	position: absolute;
+	/*border: 1px solid;*/
+}
+
+.detailTitle {
+    width: 1040px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: "黑体";
+    color: #737373;
+    line-height: 30px;
+    text-align: center;
+    /* margin-left: 0px; */
+    overflow: hidden;
+    text-align: center;
+}
+
+.detailCont {
+	float: right;
+    width: 700px;
+    height: 418px;
+    font-family: "黑体";
+    color: #737373;
+    font-size: 24px;
+    line-height: 30px;
+    overflow: hidden;
+    text-indent: 25px;
+    border: 3px solid #e88500;
+    padding: -13px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.pic {
+	width: 340px;
+	height: 420px;
+	float: left;
+}
+.pic>img {
+	/*margin: 5px auto;*/
+	max-width: 340px;
+	max-height: 420px;
+}

@@ -1,0 +1,180 @@
+html, body, div, p, span, img, a, ol, ul, li, table, caption, thead, tbody, tfoot, th, td, tr {margin: 0;padding: 0;}
+ul {list-style: none;}
+
+body {font-size: 18px;font-family:"SimHei";color:#FFF;width: 720px;height: 576px;background-repeat: no-repeat;background: no-repeat url(../img/allOrder/105-1.png)}
+
+.info{width: 500px;height: 35px;position: absolute;left: 43px;top: 33px;}
+.topbar{width:720px;height:75px;position: absolute;left: 0px;top: 0px;}
+.info .item{font-weight: normal;color: #FFFFFF;font-size: 26px;}
+
+.header {width: 720px;height: 75px;}
+
+.clock {width: 250px;height: 70px;position: absolute;left: 420px;top: 0px;font-size: 16px;text-align: right;}
+#week{position: absolute;left: 0px;top: 30px;height: 16px;font-size:18px;width:140px;text-align:right;line-height:16px;}
+#YMD{position: absolute;top: 50px;left: 0px;font-size:18px;text-align: right;width: 140px;height: 16px;line-height:16px;}
+#HM {position: absolute;left: 140px;text-align: center;font-weight: normal;font-size: 38px;color: #FFFFFF;height: 42px;width: 118px;top: 25px;line-height:42px;}
+
+.iconContainer{width:637px;height:384px;left:43px;top:91px;position:absolute;font-size:22px;background:url(../img/allOrder/img_caidan.png) no-repeat;}
+.menu{width:637px;height:46px;left:0px;position:absolute;text-align:center;}
+.menu #img_order_hig{position: absolute;top:0;left:1px;width:238px;height:57px;display: none;}
+.menu-item{
+	width:126px;
+	height:46px;
+	/*float:left;*/
+	position:absolute;
+	font-size:18px;
+}
+.menu-item span{
+	position:relative;
+	top:15px;
+}
+
+.left{
+	width:305px;
+	height:313px;
+	position:absolute;
+	top:57px;
+	left:7px;
+	background:url(../img/returnOrderImpl/img_dingdanxiangqing.png) no-repeat;
+	border-right:1px solid #8E8E8E;
+	border-left:1px solid #8E8E8E;
+	border-bottom:1px solid #8E8E8E;
+	color:#0A0A0A;
+	font-family: "SimHei";
+	font-size:18px;
+}
+
+.goods-icon{
+	width:146px;
+	height:146px;
+	margin-top:41px;
+	margin-left:83px;
+}
+.goods-icon img{
+	width:146px;
+	height:146px;
+}
+.goods-detail{
+	width:305px;
+	height:115px;
+	margin-top:10px;
+}
+.goods-detail .price{
+	width:140px;
+	height:20px;
+	margin-top:10px;
+	margin-left:15px;
+	float:left;
+	color:#F00;
+}
+.goods-detail .num{
+	width:130px;
+	height:20px;
+	float:left;
+	margin-top:10px;
+	line-height:20px;
+	text-align:right;
+}
+.goods-detail .detail{
+	height:45px;
+	width:280px;
+	float:left;
+	margin-top:10px;
+	margin-left:15px;
+}
+.right{
+	width:315px;
+	height:313px;
+	position:absolute;
+	top:57px;
+	left:320px;
+	background:url(../img/evaluation/img_tuihuanhuo.png) no-repeat;
+	font-family: "SimHei";
+	color:#0A0A0A;
+}
+.eva-items {
+	width:245px;
+	height:200px;
+	position:absolute;
+	top:68px;
+	left:60px;
+}
+.eva-item {
+	width:61px;
+	height:50px;
+	float:left;
+}
+.eva-item-img{
+	width:18px;
+	height:14px;
+	background:url(../img/evaluation/heart_n.png) no-repeat;
+	margin-left:21px;
+	margin-top:18px;
+}
+.eva-bottoms {
+	width:200px;
+	height:46px;
+	position:absolute;
+	top:268px;
+	left:104px;
+}
+.eva-bottom {
+	width:124px;
+	height:46px;
+	float:left;
+}
+#telphone {
+	width:124px;
+	height:21px;
+	font-size:18px;
+	position:relative;
+	top:14px;
+}
+#eva-submit {
+	width:59px;
+	height:31px;
+	margin-top:6px;
+	margin-left:10px;
+}
+#eva-submit img {
+	width:59px;
+	height:31px;
+}
+.footer{width: 720px;height: 86px;position: absolute;left: 0px;top: 476px;}
+.button{float:left;margin-left: 8px;}
+.button img{width:97px;height:70px;}	
+.btnFocus{
+	width:97px;
+	height:70px;
+	position:absolute;
+	left:50px;
+	top:485px;
+	display:none;
+}
+.btnFocus img{
+	width:97px;
+	height:70px;
+}
+
+.page img{
+	width:43px;
+	height:28px;
+}
+
+.num-show {
+	position:absolute;
+	width:163px;
+	height:96px;
+	top:268px;
+	left:478px;
+	font-family: "SimHei";
+    font-size: 20px;
+	color:#0A0A0A;
+	display:none;
+}
+.num-show-item {
+	width:163px;
+	height:32px;
+	background-color:#C9C9C9;
+	border-bottom:1px solid #000000;
+}

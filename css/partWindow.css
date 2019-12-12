@@ -1,0 +1,114 @@
+
+body{
+	background: url(../img/partwindow.png) no-repeat;
+}
+
+
+#leftMeun{
+	    position: absolute;
+    top: 145px;
+    left: 100px;
+    width: 266px;
+    height: 440px;
+    overflow: hidden;
+}
+
+#leftMeun div{
+	height: 54px;
+    margin-bottom: 1px;
+    line-height: 54px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    background: -webkit-linear-gradient(top,#DBA9A5 0%,#C6615E 100%);
+}
+
+
+#rightMeun{
+	position: absolute;
+    width: 803px;
+    height: 442px;
+    left: 384px;
+    top: 149px;
+    border-radius: 10px;
+}
+
+#rightMeun>div{
+	float: left;
+    position: relative;
+    left: 0px;
+	width: 95%;
+    height: 60px;
+    font-size: 28px;
+    line-height: 60px;
+    border-radius: 15px;
+    margin-top: 18px;
+    margin-left: 20px;
+}
+
+.addtime{
+	width: 200px;
+    font-size: 28px;
+}
+.titles{
+	width: 500px;
+    text-align: left;
+    text-indent: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.focusvideo{
+	border: 2px solid red;
+}
+
+.focus{
+	font-size: 28px !important;
+    font-weight: bold !important;
+    color: white !important;
+    background: -webkit-linear-gradient(top,#F76868 0%,#D71F1F 100%) !important;
+}
+.focusselect{
+	font-size: 28px !important;
+    font-weight: bold !important;
+    color: white !important;
+	 background: -webkit-linear-gradient(top,#F76868 0%,#D71F1F 100%) !important;
+}
+.pinkbg{
+	background: -webkit-linear-gradient(top,#E9E8E8 0%,#DB958A 100%) !important;
+}
+
+
+
+
+
+
+
+#page{
+	font-size: 22px;
+    font-weight: bold;
+    display: none;
+    color: #fff;
+    line-height: 34px;
+    width: 127px;
+    text-align: center;
+    height: 34px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 135px;
+    left: 714px;
+	background: -webkit-linear-gradient(top, #F66666 0%, #D82424 100%) !important;
+}
+#page div{
+	float: left;
+	width: 52px;
+	text-align: center;
+}
+
+#page div:nth-child(2){
+	width: 20px;
+}

@@ -1,0 +1,33 @@
+.model {
+	/*border: 1px solid;*/
+	width: 1060px;
+	height: 480px;
+	position: absolute;
+	top: 130px;
+	left: 105px;
+}
+
+.detailTitle {
+	width: 1060px;
+	height: 50px;
+	/*border: 1px solid;*/
+	margin: 10px auto;
+	font-size: 30px;
+	font-weight: 400;
+	font-family: "黑体";
+	color: #737373;
+	line-height: 40px;
+	text-align: center;
+}
+
+.detailCont {
+	/*border: 1px solid;*/
+	width: 1060px;
+	height: 400px;
+	font-family: "黑体";
+	color: #737373;
+	font-size: 24px;
+	line-height: 30px;
+	overflow: hidden;
+	box-sizing: border-box;
+}

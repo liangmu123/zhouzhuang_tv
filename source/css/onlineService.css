@@ -1,0 +1,178 @@
+html, body, div, p, span, img, a, ol, ul, li, table, caption, thead, tbody, tfoot, th, td, tr {margin: 0;padding: 0;}
+ul {list-style: none;}
+
+body {font-size: 18px;font-family:"SimHei";color:#FFF;width: 720px;height: 576px;background-repeat: no-repeat;background: no-repeat url(../img/allOrder/105-1.png)}
+
+.info{width: 500px;height: 35px;position: absolute;left: 43px;top: 33px;}
+.topbar{width:720px;height:75px;position: absolute;left: 0px;top: 0px;}
+.info .item{font-weight: normal;color: #FFFFFF;font-size: 26px;}
+
+.header {width: 720px;height: 75px;}
+
+.clock {width: 250px;height: 70px;position: absolute;left: 420px;top: 0px;font-size: 16px;text-align: right;}
+#week{position: absolute;left: 0px;top: 30px;height: 16px;font-size:18px;width:140px;text-align:right;line-height:16px;}
+#YMD{position: absolute;top: 50px;left: 0px;font-size:18px;text-align: right;width: 140px;height: 16px;line-height:16px;}
+#HM {position: absolute;left: 140px;text-align: center;font-weight: normal;font-size: 38px;color: #FFFFFF;height: 42px;width: 118px;top: 25px;line-height:42px;}
+
+.iconContainer{width:637px;height:384px;left:43px;top:91px;position:absolute;font-size:22px;background:url(../img/allOrder/img_caidan.png) no-repeat;}
+.menu{width:637px;height:46px;left:0px;position:absolute;text-align:center;}
+.menu #img_order_hig{position: absolute;top:0;left:1px;width:238px;height:57px;display: none;}
+.menu-item{
+	width:126px;
+	height:46px;
+	/*float:left;*/
+	position:absolute;
+	font-size:18px;
+}
+.menu-item img {
+	width:126px;
+	height:46px;
+}
+.item-text{
+	position:absolute;
+	left:70px;
+	top:106px;
+	z-index:1001;
+}
+
+.onlineService{
+	width:514px;
+	height:219px;
+	position:absolute;
+	top:75px;
+	left:57px;
+	background:url(../img/onlineService/img_krfu.png) no-repeat;
+	color:#0A0A0A;
+	font-family: "SimHei";
+	font-size:18px;
+}
+.onlineService-items {
+	width:400px;
+	height:120px;
+	position:relative;
+	left:90px;
+	top:58px;
+}
+.onlineService-item {
+	width:130px;
+	height:120px;
+	float:left;
+}
+.onlineService-item img{
+	/*width:114px;*/
+	width:82px;
+	height:117px;
+}
+.text {
+	width:260px;
+	height:29px;
+	font-size:19px;
+}
+
+.aboutUs{
+	width:637px;
+	height:100px;
+	color:#0A0A0A;
+	font-family: "SimHei";
+	font-size:18px;
+	position:absolute;
+	top:138px;
+	left:43px;
+}
+.aboutUs-imgs{
+	width: 645px;
+    height: 97px;
+	position: relative;
+    left: 0px;
+	top:0px;
+}
+.aboutUs-img {
+	width: 127px;
+    height: 95px;
+	margin-top:2px;
+	float:left;
+}
+.aboutUs-img img{
+	width: 127px;
+    height: 95px;
+}
+
+#red-bg {
+	width:297px;
+	height: 103px;
+	position:absolute;
+	left:172px;
+	top:1px;
+}
+#red-bg img {
+	width:297px;
+	height: 103px;
+}
+.contactUs{
+	width:514px;
+	height:219px;
+	position:absolute;
+	top:190px;
+	left:105px;
+	color:#0A0A0A;
+	font-family: "SimHei";
+	font-size:18px;
+}
+.contactUs-item {
+	width:514px;
+	height:44px;
+}
+.aboutUs-title {
+	position:absolute;
+	left: 39px;
+    top: 36px;
+    z-index: 1002;
+	font-family: "SimHei";
+	font-size:24px;
+	color:#FFFFFF;
+	font-weight:normal;
+}
+.text-none{
+	width: 637px;
+    height: 10px;
+	display:none;
+}
+.useHelp-text{
+	width: 630px;
+    height: 330px;
+	font-family: "SimHei";
+	font-size:20px;
+	color:#0A0A0A;
+	position:absolute;
+	top:140px;
+	left:47px;
+	overflow:hidden;
+}
+.aboutUs-text{
+	width: 630px;
+    height: 230px;
+	font-family: "SimHei";
+	font-size:20px;
+	color:#0A0A0A;
+	position:absolute;
+	top:244px;
+	left:47px;
+	overflow:hidden;
+}
+
+
+
+.footer{width: 720px;height: 86px;position: absolute;left: 0px;top: 476px;}
+.button{float:left;margin-left: 8px;}
+.button img{width:97px;height:70px;}	
+.btnFocus{
+	width:97px;
+	height:70px;
+	position:absolute;
+	left:50px;
+	top:485px;
+}
+.btnFocus img{
+	width:97px;
+	height:70px;
+}

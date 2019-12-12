@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>testDemo</title>
+
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/key.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/EVM_control.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/evm.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+
+		<div id="shebei" style="font-size:50px ;color: yellow;">
+			设备号：
+		</div>
+
+		<div id="shebei1" style="font-size:50px ;color: yellow;">
+			用户信息：
+		</div>
+		<div id="shebei2" style="font-size:50px ;color: yellow;">
+			卡号：
+		</div>
+		<div id="shebei3" style="font-size:30px ; margin-left:100px;width:1100px;color: red;">
+			信息：
+		</div>
+
+		<script type="text/javascript">
+			var numbers = hardware.STB.serialNumber;
+			$("#shebei").append(numbers);
+
+			var numbers1 = hardware.STB.userInfo;
+			$("#shebei1").append(numbers1);
+			
+			var numbers2 = hardware.smartCard.serialNumber;
+			$("#shebei2").append(numbers2);
+			
+			
+			$.ajax({
+				type: 'get',
+				url: 'http://172.16.232.9:8080/SMART_BMS_INTERFACE/BossInterface/getUser?smartCardId=9932028100213792',
+				dataType: "jsonp",
+				jsonp: "callback",
+				async: false,
+				success: function(data) {
+					var d = data;
+					$("#shebei3").append(data);
+				},
+				error: function() {
+					alert('系统错误');
+				}
+			});
+			
+			
+		</script>
+	</body>
+
+</html>

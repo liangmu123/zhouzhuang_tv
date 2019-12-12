@@ -1,0 +1,58 @@
+.main {
+	width: 788px;
+	height: 330px;
+	position: absolute;
+	left: 412px;
+	top: 160px;
+	overflow: hidden;
+}
+
+.con {
+	width: 1088px;
+	height: 467px;
+	/*background: #8F8F73;*/
+	position: absolute;
+	top: 135px;
+	left: 100px;
+}
+
+.title {
+	text-align: center;
+	position: relative;
+	top: 10px;
+	font-size: 36px;
+	font-family: SimHei;
+	font-weight: 400;
+	color: rgba(53, 50, 50, 1);
+	line-height: 36px;
+}
+
+.photo {
+	position: relative;
+	float: left;
+	left: 30px;
+	top: 10px;
+}
+
+.info {
+	position: relative;
+	float: left;
+	left: 60px;
+	top: 10px;
+
+	font-size: 26px;
+	font-family: SimHei;
+	font-weight: 400;
+	color: rgba(53, 50, 50, 1);
+	line-height: 36px;
+}
+
+.jianjie {
+	position: relative;
+	top: 20px;
+	font-size: 26px;
+	font-family: SimHei;
+	font-weight: 400;
+	color: rgba(53, 50, 50, 1);
+	line-height: 36px;
+}

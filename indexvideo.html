@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+
+		<script src="js/evm.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/EVM_control.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/key.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/address.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*控制进度条等全局样式*/
+			
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			body {
+				width: 1280px;
+				height: 720px;
+				position: absolute;
+			}
+			
+			#kuang {
+				width: 1280px;
+				height: 60px;
+				padding-top: 20px;
+				position: absolute;
+				bottom: 0px;
+				background: -webkit-linear-gradient(top, transparent 0%, black 100%) !important;
+				transition: all 3s linear;
+				-webkit-transition: all 3s linear;
+			}
+			
+			#one {
+				width: 980px;
+				height: 5px;
+				border-radius: 5px;
+				border: solid 1px transparent;
+				box-shadow: 0px 0px 2px transparent;
+				position: relative;
+				background: gainsboro;
+				/*darkgrey*/
+				z-index: 100;
+				margin: 0 auto;
+				float: left;
+				margin-top: 15px;
+				margin-left: 20px;
+			}
+			
+			#two {
+				width: 0px;
+				height: 5px;
+				border-radius: 5px;
+				border: solid 1px transparent;
+				position: relative;
+				top: -1px;
+				left: -1px;
+				background: dodgerblue;
+				z-index: 99;
+			}
+			
+			#yuan {
+				width: 9px;
+				height: 9px;
+				border-radius: 5px;
+				background: dodgerblue;
+				float: right;
+				position: relative;
+				left: 3px;
+				top: -3px;
+				border: solid 1px grey;
+			}
+			
+			#nowtime {
+				position: relative;
+				float: left;
+				font-size: 25px;
+				margin-left: 10px;
+				color: white;
+			}
+			
+			#nowtime div {
+				float: left;
+			}
+			
+			#contenttime {
+				position: relative;
+				float: left;
+				font-size: 25px;
+				color: white;
+			}
+			
+			#contenttime div {
+				float: left;
+			}
+			
+			#play {
+				float: left;
+				margin-left: 10px;
+			}
+			
+			#xiegang {
+				font-size: 25px;
+				position: relative;
+				float: left;
+				color: white;
+			}
+			
+			#imgs {
+				position: absolute;
+				bottom: 80px;
+				right: 50px;
+			}
+			
+			#pormpt {
+				position: absolute;
+				display: none;
+				left: 410px;
+				top: 299px;
+				vertical-align: middle
+			}
+		</style>
+
+		<script type="text/javascript">
+			//取url参数
+			function getParam(paramName) {
+				paramValue = "";
+				isFound = false;
+				if(this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) {
+					arrSource = decodeURI(this.location.search).substring(1, this.location.search.length).split("&");
+					i = 0;
+					while(i < arrSource.length && !isFound) {
+						if(arrSource[i].indexOf("=") > 0) {
+							if(arrSource[i].split("=")[0].toLowerCase() == paramName.toLowerCase()) {
+								paramValue = arrSource[i].split("=")[1];
+								isFound = true;
+							}
+						}
+						i++;
+					}
+				}
+				return paramValue;
+			}
+		</script>
+		<title>视频播放详情页</title>
+	</head>
+
+	<body bgcolor="transparent"  onUnload="exitPage();">
+
+		<div id="pormpt" style="color: red;">
+			<!--提示播放完毕-->
+			<img src="images/pormpt.png" />
+		</div>
+
+		<div id="imgs">
+			<img class="logo" width="55px" height="55px" src="img/pause.png" />
+			<!--右下角的播放/暂停暂按钮-->
+		</div>
+		<div id="kuang">
+			<div id="play">
+				<img class="logo" width="30px" height="30px" src="img/pause.png" />
+				<!--进度条的播放/暂停按钮-->
+			</div>
+			<div id="nowtime">
+				<!--当前时间-->
+				<div class="time">0</div>
+				<!--当前时-->
+				<div>:</div>
+				<div class="time">00</div>
+				<!--当前分钟数-->
+				<div>:</div>
+				<div class="time">00</div>
+				<!--当前秒-->
+			</div>
+			<div id="xiegang">
+				&nbsp;/&nbsp;
+			</div>
+			<div id="contenttime">
+				<div class="time">0</div>
+				<!--总时长-->
+				<div>:</div>
+				<div class="time">00</div>
+				<!--进制总分钟-->
+				<div>:</div>
+				<div class="time">00</div>
+				<!--进制总秒钟-->
+			</div>
+			<div id="one">
+				<!--总长度-->
+				<div id="two">
+					<!--当前长度-->
+					<div id="yuan"></div>
+					<!--进度头-->
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		var flag = true; //用于判断是否执行统计
+		var status = 1; //判断暂停/播放状态 1是正在播放，0是暂停播放
+		var id = getParam('id'); //获取视频id，用于数据统计
+//		var mediaStr = EVM.cookie.getValue('mediaStr'); //获取播放地址
+//		console.info(mediaStr)
+
+		var mp = new MediaPlayer();
+
+		var looptime; //延时句柄
+		//fun start stop用于控制进度条显示隐藏
+		function fun() {
+			$("#kuang").hide();
+			$("#imgs").hide();
+		}
+
+		function start() {
+			clearTimeout(looptime);
+			looptime = setTimeout(fun, 7000);
+		}
+
+		function stop() {
+			clearTimeout(looptime);
+		}
+
+		start(); //开始播放四秒后隐藏
+
+		function grabEvent(e) {
+
+			e = e || window.event;
+			var keyCode = e.which || e.keyCode;
+			switch(keyCode) {
+				case 640:
+				case 114:
+				case keymap.iPanel.BACK:
+				case keymap.DVN.BACK:
+					clearInterval(loop); //释放循环资源
+					window.history.go(-1);
+					break;
+				case 37: //left
+					clearTimeout(looptime)
+					flag = true;
+					$("#imgs").show();
+					$("#kuang").show();
+					content -= 11; //快退进度
+					mp.playByTime(1, content, 0); //具体调用进度方法
+					start();
+					break;
+				case 39: //right
+					clearTimeout(looptime)
+					flag = true;
+					$("#imgs").show();
+					$("#kuang").show();
+					content += 11; //定义进度数据小于15左右和快要结束再调用playByTime会有回退的情况
+					if(content > video_sec) { //快进到党建时长超过总时长时，清空clearInterval并且退出
+						mp.stop(0);
+					} else { //若是没有超过
+						mp.playByTime(1, content, 0);
+						start();
+					}
+					break;
+				case 13:
+					if(status == 1) { //判断暂停/播放状态
+						stop(); //清空延时，让下面进度条和按钮持续显示
+						$('.logo').attr('src', 'img/play.png'); //更改播放按钮
+						flag = false //暂停进度条轮询状态
+						mp.pause();
+						status = 0;
+						$("#imgs").show();
+						$("#kuang").show();
+					} else {
+						$('.logo').attr('src', 'img/pause.png');
+						mp.resume();
+						flag = true;
+						status = 1;
+						start();
+					}
+					break;
+			}
+		}
+		document.onkeydown = grabEvent;
+
+		function init() { //视频播放的方法
+			mp.stop();
+			var nativePlayerInstanceId = mp.getNativePlayerInstanceId();
+			mp.setSingleMedia(mediaStr);
+			mp.setVideoDisplayArea(0, 0, 1280, 720);
+			mp.setVideoDisplayMode(0);
+			mp.refreshVideoDisplay();
+			mp.playFromStart();
+
+		}
+
+		function exitPage() {
+			mp.stop();
+
+			window.history.go(-1);
+		}
+
+		setTimeout(function() {
+
+			video_sec = mp.getMediaDuration(); //获取视频总秒数的方法
+
+			var content = mp.getCurrentPlayTime(); //统计用的总秒数,获取视频当前秒数的方法
+
+			videos = parseInt(video_sec) % 60; //播放视频的总秒数
+			var videomin = (video_sec / 60) % 60; //播放视频的进制分钟数
+			var videoh = ((video_sec / 60) / 60); //播放视频的进制秒数
+
+			if(videos < 10) {
+				videos = "0" + videos;
+			}
+			$(".time").eq(5).html(videos);
+
+			if(videomin < 10) {
+				if(videomin <= 1) {
+					videomin = '00';
+				} else {
+					videomin = "0" + parseInt(videomin);
+				}
+			} else {
+				videomin = parseInt(videomin)
+			}
+			$(".time").eq(4).html(videomin);
+			$(".time").eq(3).html(parseInt(videoh));
+		}, 2500)
+
+		var onewidth = document.getElementById('one');
+		widght = onewidth.offsetWidth; //获取总长进度条的长度
+
+		var loop = setInterval(function() {
+
+			if(flag) {
+				content = mp.getCurrentPlayTime();
+				s = parseInt(content); //用于转换的总秒数
+				m = 0; //用于转换的总分钟数
+				h = 0; //总小时数
+				if(s >= 60) {
+					m = parseInt(s / 60);
+					min = m % 60;
+				}
+				sec = s % 60;
+				if(m >= 60) {
+					h = parseInt(m / 60);
+				}
+				var per = parseFloat((content / video_sec));
+
+				var twowidth = document.getElementById('two');
+				var setper = per.toFixed(4);
+
+				var pers = widght * setper;
+
+				twowidth.style.width = pers + "px" //动态变化进度条
+
+				$(".time").eq(0).html(h);
+				console.info($("#nowtime"))
+				if(min < 10) {
+					if(min < 1) {
+						min = '00';
+					} else {
+						min = "0" + min;
+					}
+				}
+				$(".time").eq(1).html(min);
+				if(sec < 10) {
+					sec = "0" + sec;
+				}
+				$(".time").eq(2).html(sec);
+				var loopout = setTimeout(
+					function setplayend() {
+						if(s + 1 > video_sec) {
+							//mp.playByTime(1, 0, 0);//设置播放结束回到起点重新播放
+							$("#imgs").show();
+							$("#kuang").show();
+							$("#pormpt").show();
+							setTimeout(function() {
+								window.history.go(-1);
+							}, 5000)
+						} else {
+							clearTimeout(loopout)
+						}
+					}, 2000)
+			}
+
+		}, 1000);
+
+		
+	</script>
+	<script>
+			$.ajax({
+				type: 'get',
+				url: api +"index/shouyeshipin?id=220",
+				dataType: "jsonp",
+				jsonp: "callback",
+				async: false,
+				success: function(data) {
+					var d = data.data;
+					mediaStr = d.play_url;
+					init();
+				},
+				error: function() {
+					alert('系统错误');
+				}
+			});
+		</script>
+</html>

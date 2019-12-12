@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+.tip_msg {
+	width:638px;
+	height:249px;
+	position:absolute;
+	left:41px;
+	top:163px;
+	background:no-repeat url(../img/common/tixinkuang.png);
+	font-family:"SimHei";
+	font-size:24px;
+	display:none;
+}
+.tip_msg_items {
+	width:638px;
+	height:46px;
+}
+.tip_title {
+	width:638px;
+	height:25px;
+	position:relative;
+	top:12px;
+	color:#FFFFFF;
+	text-align:center;
+}
+.tip_content {
+	width:590px;
+	height:130px;
+	position:relative;
+	top:16px;
+	left:24px;
+	color:#000000;
+	text-align:center;
+}
+.tip_btn{
+	width:137px;
+	height:30px;
+	position:relative;
+	top:8px;
+	left:250px;
+	background:no-repeat url(../img/common/btn.png);
+}
+.tip_btn_sure{
+	width:41px;
+	height:22px;
+	position:relative;
+	left:49px;
+	top:5px;
+	font-size:20px;
+	color:#FFFFFF;
+}
+
+/* 确认、取消css*/
+.tip{width:638px;height:249px;position:absolute;left:41px;top:163px;background:no-repeat url(../img/common/tixinkuang.png);
+	font-size:24px;display:none;color:#000;}
+.tip .item{width:638px;height:46px;float:left;}
+.item .title{width:638px;height:25px;position:relative;top:12px;color:#FFFFFF;text-align:center;}
+.item .msg{width:590px;height:130px;position:relative;top:16px;left:24px;color:#000000;text-align:center;}
+.item .content{width:638px;height:46px;position:absolute;top:201px;}
+.item .confirm{width:137px;height:30px;position:absolute;top:8px;left:167px;background:no-repeat url(../img/common/btn.png);}
+.btn_confirm{width:137px;height:22px;position:relative;text-align:center;top:5px;font-size:20px;color:#FFFFFF;}
+.item .cancel{width:137px;height:30px;position:absolute;top:8px;left:334px;background:no-repeat url(../img/common/btn.png);}
+.btn_cancel{width:137px;height:22px;position:relative;text-align:center;top:5px;font-size:20px;color:#FFFFFF;}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/key.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/EVM_control.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/evm.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/address.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script type="application/javascript">
+			var play_url;
+			var mp = new MediaPlayer();
+			var instanceId = mp.getNativePlayerInstanceID(); //读取本地的媒体播放实例的标识
+			try {
+				mp = new MediaPlayer();
+				//				mp = var mp = iPanel.mainFrame.mp;
+			} catch(e1) {
+				alert("e1: " + e1);
+			}
+			try {
+				function init() {
+					mp.stop();
+					//		var nativePlayerInstanceId = mp.getNativePlayerInstanceId();
+					mp.setAllowTrickmodeFlag(0);
+					mp.setSingleMedia(play_url);
+					mp.setCurrentAudioChannel("Stereo");
+					mp.setVideoDisplayArea(350, 250, 604, 340);
+					
+					
+					mp.setVideoDisplayMode(0);
+					mp.refreshVideoDisplay();
+					mp.playFromStart();
+					
+				}
+			} catch(e2) {
+				alert("e2: " + e2);
+			}
+
+
+
+		</script>
+		<title>首页</title>
+	</head>
+
+	<body>
+		<div id="head">
+			<!--公共头部不用动-->
+			<div id="title">智慧党建</div>
+			<div id="time"></div>
+			<div id="touxiang"><img src="img/user.png" /></div>
+			<div id="name" class="name">用户名</div>
+			<div id="code">
+				<div id=""><img src="img/2.png" /></div>
+				扫一扫关注
+			</div>
+
+		</div>
+
+		<div id="nav" class="nav">
+
+		</div>
+
+		<div id="login">
+			<div id="tit">
+				用户登陆
+			</div>
+			<div id="names">
+				账号：<input class="select" />
+			</div>
+			<div id="pwd">
+				密码：<input class="select" />
+			</div>
+			<div id="enter">
+				<div id="enters" class="select">
+					登 陆
+				</div>
+				<div id="enters" class="select">
+					取 消
+				</div>
+				<div id="alerts" >
+					
+				</div>
+			</div>
+		</div>
+		<marquee class="marquees" behavior="scroll">欢迎来到智慧党建</marquee>
+	</body>
+
+	<script src="js/endPublic.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	
+	<script>
+			$.ajax({
+				type: 'get',
+				url: api +"party/getVideo?area_id=11",
+				dataType: "jsonp",
+				jsonp: "callback",
+				async: false,
+				success: function(data) {
+					var d = data.data;
+					play_url = d.video_tv;
+					init()
+				},
+				error: function() {
+					alert('系统错误');
+				}
+			});
+		</script>
+
+</html>
